@@ -2,7 +2,7 @@ export const runtime = "nodejs";
 
 function getTokenFromLoginResponse(loginData: any): string | undefined {
   return (
-    loginData?.t?.token ||
+    loginData?.t?.token;
     loginData?.t?.sessionToken ||
     loginData?.t?.xSessionToken ||
     loginData?.t?.session_token ||
@@ -53,7 +53,7 @@ export async function POST(req: Request) {
       return Response.json({ error: "登录失败", detail: loginData }, { status: 500 });
     }
 
-    const token = getTokenFromLoginResponse(loginData);
+    const token = loginData?.t?.token;
 
     if (!token) {
       return Response.json(
