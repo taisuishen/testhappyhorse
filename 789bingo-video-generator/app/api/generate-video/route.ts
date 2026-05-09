@@ -58,12 +58,16 @@ export async function POST(req: Request) {
           model: "happyhorse-1.0-r2v",
           input: {
             prompt,
-            media: [
-              {
-                type: "reference_image",
-                url: imageUrl,
-              },
-            ],
+           media: [
+                  {
+                    type: "reference_image",
+                    url: "https://uat-img.789bingo.com/merchant/fbc05060-d7a2-4823-9ecf-29e25d9036bd.png",
+                  },
+                  {
+                    type: "reference_image",
+                    url: imageUrl,
+                  },
+                ],
           },
           parameters: {
             resolution: "720P",
