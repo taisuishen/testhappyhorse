@@ -1,0 +1,84 @@
+export const runtime = "nodejs";
+
+const prompt = `
+Create a cinematic ultra-detailed vertical fantasy video in 3:4 aspect ratio.
+
+Use the uploaded image as the main character reference. The main character must match the uploaded person exactly, including facial appearance, hairstyle, makeup style, temperament, body proportions, clothing design, accessories, and overall visual identity.
+
+Preserve the original headdress, hairstyle, and costume details consistently throughout the video.
+
+The character is gently leaning beneath an enormous blooming cherry blossom tree. She holds a fresh red rose in her right hand while slightly lowering her head and softly smelling the flower. Her expression is calm, emotional, elegant, romantic, and slightly melancholic.
+
+The character appears in a semi-silhouette cinematic effect, with soft translucent facial lighting, clear delicate facial features, realistic skin texture, glowing eyes, and no dark muddy shadows on the face.
+
+Use cinematic golden-hour backlighting with warm sunset rim light outlining the character's silhouette while softly illuminating facial details.
+
+The background features a magnificent European vintage clock tower completely covered with blooming roses and climbing rose vines. Architectural details, windows, and vintage structure remain subtly visible beneath the flowers and vines.
+
+Pink cherry blossom petals drift naturally through the air. The scene should feel extremely detailed, dreamy, romantic, elegant, and cinematic.
+
+Place the "789Bingo" brand logo on the upper-left chest area of the character's clothing, matching the logo style, font, color palette, glow effect, embroidery or print texture, and premium appearance from the reference. The logo must be naturally integrated into the outfit, not floating in the background.
+
+Video duration: 5 seconds.
+Camera movement: slow cinematic push-in.
+Motion: subtle floating sakura petals, gentle hair movement, soft cloth movement, rose petals swaying slightly.
+Style: Douyin viral fantasy video, cinematic romantic fantasy, ultra realistic, luxury commercial advertisement, film-grade lighting, highly detailed.
+
+Negative prompt: low quality, blurry face, distorted anatomy, bad hands, extra fingers, duplicate body, mutated face, dark face, overexposed skin, flat lighting, cartoon, low detail, cropped head, broken limbs, messy background, floating logo, misplaced logo, wrong logo position, text artifacts, watermark, logo distortion, oversaturated colors, unrealistic eyes, ugly hands, bad proportions, low resolution.
+`;
+
+export async function POST(req: Request) {
+  try {
+    const { imageUrl } = await req.json();
+
+    if (!imageUrl) {
+      return Response.json({ error: "缺少 imageUrl" }, { status: 400 });
+    }
+
+    const apiKey = process.env.DASHSCOPE_API_KEY;
+
+    if (!apiKey) {
+      return Response.json({ error: "DASHSCOPE_API_KEY 未配置" }, { status: 500 });
+    }
+
+    const createResp = await fetch(
+      "https://dashscope.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+          "X-DashScope-Async": "enable",
+        },
+        body: JSON.stringify({
+          model: "happyhorse-1.0-r2v",
+          input: {
+            prompt,
+            media: [
+              {
+                type: "reference_image",
+                url: imageUrl,
+              },
+            ],
+          },
+          parameters: {
+            resolution: "720P",
+            ratio: "3:4",
+            duration: 5,
+            watermark: false,
+          },
+        }),
+      }
+    );
+
+    const createData = await createResp.json();
+
+    if (!createResp.ok) {
+      return Response.json(createData, { status: createResp.status });
+    }
+
+    return Response.json(createData);
+  } catch (error: any) {
+    return Response.json({ error: error?.message || "生成接口异常" }, { status: 500 });
+  }
+}
