@@ -55,8 +55,8 @@ export async function POST(req: Request) {
           "X-DashScope-Async": "enable",
         },
         body: JSON.stringify({
-          //model: "happyhorse-1.0-r2v",
-          model:"wan2.7-i2v-2026-04-25",
+          model: "happyhorse-1.0-r2v",
+          //model:"wan2.7-i2v-2026-04-25",
           input: {
             prompt,
            media: [
