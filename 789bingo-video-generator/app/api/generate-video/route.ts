@@ -73,8 +73,7 @@ export async function POST(req: Request) {
           parameters: {
             resolution: "720P",
             ratio: "3:4",
-            duration: 5,
-            watermark: false,
+            duration: 5
           },
         }),
       }
