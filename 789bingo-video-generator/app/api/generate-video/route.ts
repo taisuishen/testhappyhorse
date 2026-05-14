@@ -46,7 +46,7 @@ export async function POST(req: Request) {
     }
 
     const createResp = await fetch(
-      "https://dashscope.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+      "https://dashscope-intl.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
       {
         method: "POST",
         headers: {
