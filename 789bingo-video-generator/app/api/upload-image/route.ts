@@ -7,78 +7,35 @@ export async function POST(req: Request) {
     const file = formData.get("file") as File | null;
 
     if (!file) {
-      return Response.json(
-        { error: "请上传图片" },
-        { status: 400 }
-      );
+      return Response.json({ error: "请上传图片" }, { status: 400 });
     }
 
-    const fingerprint =
-      process.env.BINGO_FINGERPRINT ||
-      "72198a2079651758cad4629d7a3da949";
-
-    // 固定 token
-    const token = process.env.BINGO_TOKEN!;
-
     const uploadForm = new FormData();
+    uploadForm.append("reqtype", "fileupload");
+    uploadForm.append("fileToUpload", file, file.name || "upload.jpg");
 
-    uploadForm.append("file", file);
+    const uploadResp = await fetch("https://catbox.moe/user/api.php", {
+      method: "POST",
+      body: uploadForm,
+    });
 
-    uploadForm.append("projectCode", "cx_sports");
+    const rawText = (await uploadResp.text()).trim();
 
-    uploadForm.append("platformCode", "1");
+    console.log("catbox response:", uploadResp.status, rawText.slice(0, 300));
 
-    uploadForm.append("userId", "1027571");
-
-    uploadForm.append("expireAfterDays", "0");
-
-    const uploadResp = await fetch(
-      "https://qa-upload.789bingo.com/api/upload/image",
-      {
-        method: "POST",
-
-        headers: {
-          accept: "application/json, text/plain, */*",
-
-          origin: "https://qa-bo.789bingo.com",
-
-          referer: "https://qa-bo.789bingo.com/",
-
-          "x-fingerprint": fingerprint,
-
-          "x-lang": "zh",
-
-          "x-session-platform-code": "bingo",
-
-          // 关键
-          "x-session-token": token,
-        },
-
-        body: uploadForm,
-      }
-    );
-
-    const uploadData = await uploadResp.json();
-
-    console.log("uploadData:", uploadData);
-
-    if (!uploadResp.ok || !uploadData?.success) {
+    if (!uploadResp.ok || !rawText.startsWith("https://")) {
       return Response.json(
         {
-          error: "图片上传失败",
-
-          detail: uploadData,
+          error: "图片上传失败（catbox 返回异常）",
+          status: uploadResp.status,
+          detail: rawText.slice(0, 500),
         },
         { status: 500 }
       );
     }
 
-    const host = uploadData?.t?.resServerHost;
-
-    const path = uploadData?.t?.path;
-
     return Response.json({
-      imageUrl: `${host}${path}`,
+      imageUrl: rawText,
     });
   } catch (e: any) {
     console.error(e);
