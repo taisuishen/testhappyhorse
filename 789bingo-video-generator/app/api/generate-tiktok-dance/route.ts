@@ -32,6 +32,7 @@ export async function POST(req: Request) {
             video_url: REFERENCE_VIDEO_URL,
           },
           parameters: {
+            mode: "wan-mix",
             check_image: true,
             video_extension: false,
           },
