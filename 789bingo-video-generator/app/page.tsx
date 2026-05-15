@@ -3,6 +3,9 @@
 import { useRef, useState } from "react";
 
 type Status = "idle" | "uploading" | "creating" | "polling" | "success" | "failed";
+type Template = "cherry" | "tiktok";
+
+const TIKTOK_REFERENCE_VIDEO = "https://litter.catbox.moe/yrj6f4o7f544ktul.mp4";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -12,6 +15,7 @@ export default function Home() {
   const [videoUrl, setVideoUrl] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("上传人物图片，选择模板，一键生成热门短视频");
+  const [template, setTemplate] = useState<Template>("cherry");
   const fileRef = useRef<HTMLInputElement | null>(null);
 
   function onPickFile(nextFile?: File) {
@@ -23,6 +27,18 @@ export default function Home() {
     setStatus("idle");
     setMessage("图片已选择，可以开始生成");
     setPreview(URL.createObjectURL(nextFile));
+  }
+
+  function onSelectTemplate(next: Template) {
+    setTemplate(next);
+    setVideoUrl("");
+    setTaskId("");
+    setStatus("idle");
+    setMessage(
+      next === "tiktok"
+        ? "已选择 TikTok 舞蹈模板，上传人物图片后生成换人舞蹈视频"
+        : "已选择樱花树下的约定模板，上传人物图片后生成视频"
+    );
   }
 
   async function pollTask(nextTaskId: string) {
@@ -86,7 +102,10 @@ export default function Home() {
       setStatus("creating");
       setMessage("公网图片地址已生成，正在创建视频任务...");
 
-      const generateResp = await fetch("/api/generate-video", {
+      const endpoint =
+        template === "tiktok" ? "/api/generate-tiktok-dance" : "/api/generate-video";
+
+      const generateResp = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ imageUrl: uploadData.imageUrl }),
@@ -122,12 +141,33 @@ export default function Home() {
       <section className="card">
         <div className="templateHeader">
           <span>模板选择</span>
-          <small>当前仅开放一个模板</small>
+          <small>当前开放 2 个模板</small>
         </div>
 
-        <button className="templateButton" type="button">
-          樱花树下的约定
-        </button>
+        <div className="templateGrid">
+          <button
+            className={`templateButton ${template === "cherry" ? "active" : ""}`}
+            type="button"
+            onClick={() => onSelectTemplate("cherry")}
+          >
+            樱花树下的约定
+          </button>
+          <button
+            className={`templateButton tiktok ${template === "tiktok" ? "active" : ""}`}
+            type="button"
+            onClick={() => onSelectTemplate("tiktok")}
+          >
+            TikTok 舞蹈
+          </button>
+        </div>
+
+        {template === "tiktok" && (
+          <div className="referenceBox">
+            <strong>原始参考视频</strong>
+            <video src={TIKTOK_REFERENCE_VIDEO} controls playsInline muted />
+            <span>系统会让你上传的人物跳出与这段视频相同的舞蹈动作</span>
+          </div>
+        )}
 
         <div className="uploadBox" onClick={() => fileRef.current?.click()}>
           <input

@@ -14,7 +14,7 @@ export async function POST(req: Request) {
       return Response.json({ error: "DASHSCOPE_API_KEY 未配置" }, { status: 500 });
     }
 
-    const resp = await fetch(`https://dashscope.aliyuncs.com/api/v1/tasks/${taskId}`, {
+    const resp = await fetch(`https://dashscope-intl.aliyuncs.com/api/v1/tasks/${taskId}`, {
       headers: {
         Authorization: `Bearer ${apiKey}`,
       },
