@@ -12,21 +12,25 @@ export async function POST(req: Request) {
 
     const uploadForm = new FormData();
     uploadForm.append("reqtype", "fileupload");
+    uploadForm.append("time", "72h");
     uploadForm.append("fileToUpload", file, file.name || "upload.jpg");
 
-    const uploadResp = await fetch("https://catbox.moe/user/api.php", {
-      method: "POST",
-      body: uploadForm,
-    });
+    const uploadResp = await fetch(
+      "https://litterbox.catbox.moe/resources/internals/api.php",
+      {
+        method: "POST",
+        body: uploadForm,
+      }
+    );
 
     const rawText = (await uploadResp.text()).trim();
 
-    console.log("catbox response:", uploadResp.status, rawText.slice(0, 300));
+    console.log("litterbox response:", uploadResp.status, rawText.slice(0, 300));
 
     if (!uploadResp.ok || !rawText.startsWith("https://")) {
       return Response.json(
         {
-          error: "图片上传失败（catbox 返回异常）",
+          error: "图片上传失败（litterbox 返回异常）",
           status: uploadResp.status,
           detail: rawText.slice(0, 500),
         },
