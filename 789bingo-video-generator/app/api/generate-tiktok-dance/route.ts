@@ -32,7 +32,7 @@ export async function POST(req: Request) {
             video_url: REFERENCE_VIDEO_URL,
           },
           parameters: {
-            mode: "wan-std",
+            mode: "wan-pro",
             check_image: true,
             video_extension: false,
           },
