@@ -96,7 +96,7 @@ p {
 
 .templateGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -112,6 +112,10 @@ p {
 
 .templateButton.tiktok {
   background: linear-gradient(135deg, #25f4ee, #fe2c55);
+}
+
+.templateButton.happyhorse {
+  background: linear-gradient(135deg, #f6d365, #ff8a3d);
 }
 
 .templateButton.active {

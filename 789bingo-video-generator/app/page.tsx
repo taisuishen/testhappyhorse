@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 
 type Status = "idle" | "uploading" | "creating" | "polling" | "success" | "failed";
-type Template = "cherry" | "tiktok";
+type Template = "cherry" | "tiktok" | "happyhorse";
 
 const TIKTOK_REFERENCE_VIDEO = "https://litter.catbox.moe/49eknj.mp4";
 
@@ -16,6 +16,7 @@ export default function Home() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("上传人物图片，选择模板，一键生成热门短视频");
   const [template, setTemplate] = useState<Template>("cherry");
+  const needImage = template !== "happyhorse";
   const fileRef = useRef<HTMLInputElement | null>(null);
 
   function onPickFile(nextFile?: File) {
@@ -37,6 +38,8 @@ export default function Home() {
     setMessage(
       next === "tiktok"
         ? "已选择 TikTok 舞蹈模板，上传人物图片后生成换人舞蹈视频"
+        : next === "happyhorse"
+        ? "已选择 Happy Horse 模板，无需上传图片，直接生成品牌视频"
         : "已选择樱花树下的约定模板，上传人物图片后生成视频"
     );
   }
@@ -88,42 +91,56 @@ export default function Home() {
   }
 
   async function handleGenerate() {
-    if (!file) {
+    if (needImage && !file) {
       alert("请先上传人物图片");
       return;
     }
 
     try {
-      setStatus("uploading");
-      setMessage("正在上传图片到 OSS...");
       setVideoUrl("");
       setTaskId("");
 
-      const formData = new FormData();
-      formData.append("file", file);
+      let uploadedImageUrl = "";
 
-      const uploadResp = await fetch("/api/upload-image", {
-        method: "POST",
-        body: formData,
-      });
+      if (needImage) {
+        setStatus("uploading");
+        setMessage("正在上传图片到图床...");
 
-      const uploadData = await uploadResp.json();
+        const formData = new FormData();
+        formData.append("file", file as File);
 
-      if (!uploadResp.ok || !uploadData?.imageUrl) {
-        throw new Error(`图片上传失败：${JSON.stringify(uploadData)}`);
+        const uploadResp = await fetch("/api/upload-image", {
+          method: "POST",
+          body: formData,
+        });
+
+        const uploadData = await uploadResp.json();
+
+        if (!uploadResp.ok || !uploadData?.imageUrl) {
+          throw new Error(`图片上传失败：${JSON.stringify(uploadData)}`);
+        }
+
+        uploadedImageUrl = uploadData.imageUrl;
+        setImageUrl(uploadedImageUrl);
+        setMessage("公网图片地址已生成，正在创建视频任务...");
+      } else {
+        setImageUrl("");
+        setMessage("正在创建文生视频任务...");
       }
 
-      setImageUrl(uploadData.imageUrl);
       setStatus("creating");
-      setMessage("公网图片地址已生成，正在创建视频任务...");
 
       const endpoint =
-        template === "tiktok" ? "/api/generate-tiktok-dance" : "/api/generate-video";
+        template === "tiktok"
+          ? "/api/generate-tiktok-dance"
+          : template === "happyhorse"
+          ? "/api/generate-happy-horse"
+          : "/api/generate-video";
 
       const generateResp = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ imageUrl: uploadData.imageUrl }),
+        body: needImage ? JSON.stringify({ imageUrl: uploadedImageUrl }) : "{}",
       });
 
       const generateData = await generateResp.json();
@@ -156,7 +173,7 @@ export default function Home() {
       <section className="card">
         <div className="templateHeader">
           <span>模板选择</span>
-          <small>当前开放 2 个模板</small>
+          <small>当前开放 3 个模板</small>
         </div>
 
         <div className="templateGrid">
@@ -174,6 +191,13 @@ export default function Home() {
           >
             TikTok 舞蹈
           </button>
+          <button
+            className={`templateButton happyhorse ${template === "happyhorse" ? "active" : ""}`}
+            type="button"
+            onClick={() => onSelectTemplate("happyhorse")}
+          >
+            Happy Horse 文生
+          </button>
         </div>
 
         {template === "tiktok" && (
@@ -184,24 +208,33 @@ export default function Home() {
           </div>
         )}
 
-        <div className="uploadBox" onClick={() => fileRef.current?.click()}>
-          <input
-            ref={fileRef}
-            type="file"
-            accept="image/*"
-            hidden
-            onChange={(event) => onPickFile(event.target.files?.[0])}
-          />
+        {template === "happyhorse" && (
+          <div className="referenceBox">
+            <strong>纯文生视频</strong>
+            <span>该模板无需上传图片，直接点击下方按钮即可生成 Happy Horse 品牌视频</span>
+          </div>
+        )}
 
-          {preview ? (
-            <img src={preview} alt="人物图片预览" />
-          ) : (
-            <div>
-              <strong>上传人物图片</strong>
-              <span>点击选择 Image 2 人物参考图</span>
-            </div>
-          )}
-        </div>
+        {needImage && (
+          <div className="uploadBox" onClick={() => fileRef.current?.click()}>
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/*"
+              hidden
+              onChange={(event) => onPickFile(event.target.files?.[0])}
+            />
+
+            {preview ? (
+              <img src={preview} alt="人物图片预览" />
+            ) : (
+              <div>
+                <strong>上传人物图片</strong>
+                <span>点击选择 Image 2 人物参考图</span>
+              </div>
+            )}
+          </div>
+        )}
 
         <button className="generateButton" type="button" onClick={handleGenerate} disabled={loading}>
           {loading ? "生成处理中..." : "立即生成视频"}
