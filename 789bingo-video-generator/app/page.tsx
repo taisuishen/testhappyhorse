@@ -55,10 +55,25 @@ export default function Home() {
       const taskStatus = data?.output?.task_status;
 
       if (taskStatus === "SUCCEEDED") {
-        const url = data?.output?.video_url || data?.output?.watermark_video_url;
-        setVideoUrl(url || "");
+        const output = data?.output || {};
+        const url =
+          output.video_url ||
+          output.watermark_video_url ||
+          output.output_video_url ||
+          output.result_url ||
+          output.video?.url ||
+          output.results?.video_url ||
+          output.results?.url ||
+          output.results?.[0]?.video_url ||
+          output.results?.[0]?.url ||
+          "";
+        setVideoUrl(url);
         setStatus("success");
-        setMessage("视频生成成功");
+        setMessage(
+          url
+            ? "视频生成成功"
+            : `视频生成成功，但未找到视频字段。原始 output：${JSON.stringify(output)}`
+        );
         return;
       }
 
