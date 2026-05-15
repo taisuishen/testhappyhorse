@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 type Status = "idle" | "uploading" | "creating" | "polling" | "success" | "failed";
 type Template = "cherry" | "tiktok";
 
-const TIKTOK_REFERENCE_VIDEO = "https://litter.catbox.moe/yrj6f4o7f544ktul.mp4";
+const TIKTOK_REFERENCE_VIDEO = "https://litter.catbox.moe/49eknj.mp4";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
