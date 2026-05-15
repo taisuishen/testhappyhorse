@@ -1,6 +1,6 @@
 export const runtime = "nodejs";
 
-const REFERENCE_VIDEO_URL = "https://litter.catbox.moe/yrj6f4o7f544ktul.mp4";
+const REFERENCE_VIDEO_URL = "https://litter.catbox.moe/49eknj.mp4";
 
 export async function POST(req: Request) {
   try {
