@@ -1,7 +1,7 @@
 export const runtime = "nodejs";
 
 const prompt = `
-Hyper realistic Korean KBO baseball stadium reaction-cam shot, 10 seconds, vertical 4:3.
+Hyper realistic Korean KBO baseball stadium audience-cam shot, 10 seconds, vertical 4:3.
 
 Use [Image 1] as the exact 789Bingo logo reference.
 Use [Image 2] as the exact face and identity reference for the female spectator.
@@ -9,24 +9,30 @@ Use [Image 2] as the exact face and identity reference for the female spectator.
 Style:
 Real live sports broadcast audience-cam, similar to concert jumbotron or baseball stadium big-screen crowd capture.
 
-Shot from far away with a long telephoto lens (200mm–400mm). Natural distant-camera feeling, like a broadcast operator randomly capturing a spectator in the crowd.
+The female spectator is NOT isolated or framed like a main character.
+She appears naturally as one person among many spectators in the crowd.
+
+Shot from far away with a long telephoto sports broadcast lens (200mm–400mm), creating realistic stadium compression and distant candid capture feeling.
 
 One single continuous locked-off shot.
-No cuts.
-No camera movement except tiny natural broadcast micro drift.
+Tiny natural live-broadcast micro drift only.
 
 Camera angle:
-Front-facing shot
-She is looking toward the baseball field, never at the camera.
+Front-facing audience angle.
+She looks toward the baseball field, never at the camera.
 
 Framing:
-Medium shot from head to upper waist/thigh while seated naturally in the stadium.
-Chest area fully visible.
+Wide crowd framing.
+The female spectator occupies only a moderate portion of the frame.
+Clearly show multiple surrounding spectators sitting beside and behind her.
+The scene should feel like a real random audience capture during a live baseball broadcast.
+
+The crowd is equally important in composition.
+Do not isolate the woman from the surrounding audience.
 
 789Bingo logo:
 Small embroidered 789Bingo logo on upper-left chest area of her shirt.
-Clearly visible during the entire video.
-Natural fabric folds and stitching.
+Clearly visible but naturally integrated into the clothing.
 
 Expression:
 Calm and focused watching the game.
@@ -36,11 +42,12 @@ No smiling.
 Only subtle blinking, breathing, and tiny eye movement.
 
 Background:
-Quiet Korean baseball crowd softly blurred with telephoto compression and creamy bokeh.
-No cheering crowd reactions.
+Quiet Korean baseball crowd with subtle natural movement.
+No dramatic reactions.
+Soft telephoto compression and creamy stadium bokeh.
 
 Top overlay:
-Small realistic Korean KBO broadcast scoreboard at the top of the frame:
+Small realistic Korean KBO broadcast scoreboard at the top:
 LG 3 — SSG 2
 8회말 2아웃
 21:47
@@ -54,6 +61,7 @@ Live TV broadcast texture.
 Subtle digital compression and high-ISO sports broadcast noise.
 
 Ultra realistic sports broadcast aesthetic.
+Natural candid spectator capture.
 `;
 
 export async function POST(req: Request) {
