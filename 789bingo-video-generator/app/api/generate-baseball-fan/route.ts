@@ -9,24 +9,63 @@ Use [Image 1] and [Image 2] as strict visual references.
 
 [Image 2] is the uploaded selfie reference. The female spectator must match the person in [Image 2] exactly, including facial appearance, hairstyle, makeup style, skin tone, temperament, body proportions, and overall visual identity. Preserve the original face, hairstyle, and identity consistently throughout the entire video.
 
+SHOT STYLE:
+Real live sports broadcast spectator-cam aesthetic.
+The shot should feel like a distant telephoto lens capture from across the stadium, similar to celebrity spectator shots or viral sports-broadcast audience captures. The camera feels physically far away from the subject rather than placed directly in front of her face.
+
 ONE SINGLE CONTINUOUS LOCKED-OFF SHOT:
-The entire 10 seconds is one continuous take from one camera position. The camera is locked on a tripod with only tiny natural handheld micro drift. Long telephoto sports lens look, 135mm–200mm equivalent. Very shallow depth of field with compressed stadium background and soft creamy bokeh.
+The entire 10 seconds is one continuous take from one distant camera position. The camera is mounted on a stabilized long-lens broadcast rig with only tiny natural handheld micro drift.
+
+LENS & DISTANCE:
+Extreme long telephoto sports lens look, 200mm–400mm equivalent.
+Strong background compression.
+Realistic distant-camera perspective.
+The framing should feel naturally captured from far away across the stadium rather than from close range.
 
 CAMERA ANGLE:
-Three-quarter front angle with a natural 20–30° side offset from her face direction. Her body is slightly angled toward the field rather than directly toward camera. Her eyes and gaze are continuously focused on the baseball field, never toward the lens. The shot should feel like a real sports broadcast spectator capture rather than a portrait setup.
+Natural three-quarter spectator angle with approximately 25–35° side offset from her face direction.
+Her body is slightly turned toward the baseball field.
+Her eyes and gaze remain continuously focused on the game and never toward the lens.
 
 FRAMING:
-Medium-wide seated spectator framing. Show her clearly from head to upper legs/knees while seated naturally in the stadium chair. Keep both shoulders, torso, lap, and chest area fully visible during the entire video. Her hands stay naturally lowered near her lap or seat armrest and never block the chest logo or camera view.
+Medium telephoto spectator framing.
+Show her from head to upper waist/thigh area while seated naturally.
+Leave natural negative space around her.
+Do not frame like a close portrait.
+The camera should feel observational and detached.
 
-Include 1–2 spectators seated on both sides of her and a visible row of fans behind her. Maintain natural spacing and realistic stadium crowd composition.
+The chest logo area remains clearly visible and unobstructed during the entire shot.
 
-789Bingo LOGO VISIBILITY:
-The 789Bingo chest logo must remain fully visible and readable during the entire 10 seconds. Place the logo clearly on the upper-left chest area of her clothing with enough lighting and camera angle visibility for the branding to be recognizable at all times.
+BACKGROUND:
+Background spectators remain calm and quiet.
+No cheering.
+No waving.
+No exaggerated reactions.
+No crowd celebration.
 
-The logo appears as a realistic embroidered or heat-printed chest patch integrated naturally into the fabric with stitching, folds, and shading.
+The surrounding audience quietly watches the game with subtle natural movement only.
+Soft crowd motion in the background.
+Deep compressed stadium depth with creamy realistic bokeh.
+
+SUBJECT BEHAVIOR:
+She quietly watches the baseball game with calm concentration.
+Natural micro-expressions only:
+slow blinking,
+steady breathing,
+tiny eye tracking,
+very subtle head movement,
+neutral mouth expression,
+slight focused brow tension.
+
+No smiling.
+No cheering.
+No hand gestures.
+No exaggerated emotion.
+
+Her hands remain lowered naturally near her lap and never block the camera or chest logo.
 
 TOP-OF-FRAME KBO SCOREBOARD:
-A smaller and more realistic Korean KBO TV scoreboard banner appears across only the top 6–8% of the frame. The scoreboard should feel subtle and proportional like a real television broadcast overlay rather than dominating the screen.
+A realistic Korean KBO TV scoreboard banner appears subtly across only the top 6–8% of the frame.
 
 Scoreboard layout:
 Left side:
@@ -38,41 +77,35 @@ SSG logo + “SSG” + score “2”
 Center:
 “8회말 2아웃”
 
-Additional elements:
+Additional broadcast elements:
 small clock “21:47”
 tiny red LIVE dot
 “KBO 리그” wordmark
 
-Use authentic Korean TV broadcast typography with a slim semi-transparent dark gradient strip background.
+Authentic Korean TV broadcast typography with a slim semi-transparent dark gradient strip background.
 
-SUBJECT BEHAVIOR:
-She is calmly and seriously focused on the baseball game with authentic micro-expressions only:
-slow blinking,
-steady breathing,
-subtle eye tracking,
-tiny head movement following the play,
-slight concentrated brow tension,
-neutral mouth expression.
-
-Her posture remains relaxed and natural throughout the shot.
+789Bingo LOGO PLACEMENT:
+The 789Bingo logo appears as a small embroidered or heat-printed patch on the upper-left chest area of her clothing.
+Approximately 4–6cm wide.
+Realistic stitching, folds, shading, and natural fabric integration.
+The logo remains fully visible and readable throughout the entire video.
 
 WARDROBE:
-Casual Korean baseball fan shirt or fitted light jacket in solid neutral or team colors with natural cotton texture and realistic folds.
+Casual Korean baseball fan clothing in neutral or team colors.
+Natural cotton fabric texture.
+Realistic folds and stitching.
 
 LIGHTING:
-Realistic stadium LED lighting.
+Realistic Korean baseball stadium LED lighting.
 Cool white arena lights.
-Night baseball atmosphere.
+Night game atmosphere.
 Natural skin tones.
-Subtle blue/cyan shadows.
-Bright stadium highlights.
-
-BACKGROUND:
-Crowded Korean baseball stadium audience with subtle movement, occasional cheer sticks, and realistic live sports atmosphere. Nearby spectators remain recognizable while deeper background crowds fall into softer bokeh.
+Subtle blue/cyan stadium shadows.
+Bright realistic stadium highlights.
 
 STYLE & TEXTURE:
 Ultra realistic live KBO television broadcast aesthetic.
-Authentic sports reaction cam.
+Authentic sports spectator-cam realism.
 Natural motion cadence.
 Subtle digital TV compression.
 Slight high-ISO broadcast noise.
@@ -81,25 +114,26 @@ Tiny natural motion blur.
 
 TIMING:
 0–2s:
-She calmly watches the field with a slow blink.
+She quietly watches the game with a slow blink.
 
 2–4s:
-Her eyes subtly follow the play with slight brow concentration.
+Her eyes subtly track the play.
 
 4–6s:
-A tiny breath in, gaze becomes more focused.
+A small breath in, slight concentration increase.
 
 6–8s:
-Slight head tilt tracking the ball.
+Tiny head adjustment following the ball.
 
 8–10s:
-Eyes remain locked on the field with one final slow blink.
+Eyes remain focused on the field with one final slow blink.
 
 Throughout the entire 10 seconds:
 camera position remains unchanged,
-framing remains unchanged,
+broadcast framing remains unchanged,
 scoreboard remains unchanged,
-789Bingo chest logo remains visible and unobstructed.
+789Bingo chest logo remains visible,
+the atmosphere remains calm, observational, and realistic.
 
 `;
 
