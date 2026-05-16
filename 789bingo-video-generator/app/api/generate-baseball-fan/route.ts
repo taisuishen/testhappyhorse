@@ -1,140 +1,59 @@
 export const runtime = "nodejs";
 
 const prompt = `
-Create a hyper realistic 10-second Korean KBO live baseball TV broadcast reaction-cam shot in 3:4 vertical aspect ratio, captured inside a crowded Korean professional baseball stadium during an intense late-game moment.
+Hyper realistic Korean KBO baseball stadium reaction-cam shot, 10 seconds, vertical 3:4.
 
-Use [Image 1] and [Image 2] as strict visual references.
+Use [Image 1] as the exact 789Bingo logo reference.
+Use [Image 2] as the exact face and identity reference for the female spectator.
 
-[Image 1] is the 789Bingo brand logo reference. The “789Bingo” logo, including font, color palette, glow effect, outline, premium styling, and visual identity, must match [Image 1] exactly.
+Style:
+Real live sports broadcast audience-cam, similar to concert jumbotron or baseball stadium big-screen crowd capture.
 
-[Image 2] is the uploaded selfie reference. The female spectator must match the person in [Image 2] exactly, including facial appearance, hairstyle, makeup style, skin tone, temperament, body proportions, and overall visual identity. Preserve the original face, hairstyle, and identity consistently throughout the entire video.
+Shot from far away with a long telephoto lens (200mm–400mm). Natural distant-camera feeling, like a broadcast operator randomly capturing a spectator in the crowd.
 
-SHOT STYLE:
-Real live sports broadcast spectator-cam aesthetic.
-The shot should feel like a distant telephoto lens capture from across the stadium, similar to celebrity spectator shots or viral sports-broadcast audience captures. The camera feels physically far away from the subject rather than placed directly in front of her face.
+One single continuous locked-off shot.
+No cuts.
+No camera movement except tiny natural broadcast micro drift.
 
-ONE SINGLE CONTINUOUS LOCKED-OFF SHOT:
-The entire 10 seconds is one continuous take from one distant camera position. The camera is mounted on a stabilized long-lens broadcast rig with only tiny natural handheld micro drift.
+Camera angle:
+Front-facing shot
+She is looking toward the baseball field, never at the camera.
 
-LENS & DISTANCE:
-Extreme long telephoto sports lens look, 200mm–400mm equivalent.
-Strong background compression.
-Realistic distant-camera perspective.
-The framing should feel naturally captured from far away across the stadium rather than from close range.
+Framing:
+Medium shot from head to upper waist/thigh while seated naturally in the stadium.
+Chest area fully visible.
 
-CAMERA ANGLE:
-Natural three-quarter spectator angle with approximately 25–35° side offset from her face direction.
-Her body is slightly turned toward the baseball field.
-Her eyes and gaze remain continuously focused on the game and never toward the lens.
+789Bingo logo:
+Small embroidered 789Bingo logo on upper-left chest area of her shirt.
+Clearly visible during the entire video.
+Natural fabric folds and stitching.
 
-FRAMING:
-Medium telephoto spectator framing.
-Show her from head to upper waist/thigh area while seated naturally.
-Leave natural negative space around her.
-Do not frame like a close portrait.
-The camera should feel observational and detached.
-
-The chest logo area remains clearly visible and unobstructed during the entire shot.
-
-BACKGROUND:
-Background spectators remain calm and quiet.
-No cheering.
-No waving.
-No exaggerated reactions.
-No crowd celebration.
-
-The surrounding audience quietly watches the game with subtle natural movement only.
-Soft crowd motion in the background.
-Deep compressed stadium depth with creamy realistic bokeh.
-
-SUBJECT BEHAVIOR:
-She quietly watches the baseball game with calm concentration.
-Natural micro-expressions only:
-slow blinking,
-steady breathing,
-tiny eye tracking,
-very subtle head movement,
-neutral mouth expression,
-slight focused brow tension.
-
-No smiling.
-No cheering.
-No hand gestures.
+Expression:
+Calm and focused watching the game.
 No exaggerated emotion.
+No cheering.
+No smiling.
+Only subtle blinking, breathing, and tiny eye movement.
 
-Her hands remain lowered naturally near her lap and never block the camera or chest logo.
+Background:
+Quiet Korean baseball crowd softly blurred with telephoto compression and creamy bokeh.
+No cheering crowd reactions.
 
-TOP-OF-FRAME KBO SCOREBOARD:
-A realistic Korean KBO TV scoreboard banner appears subtly across only the top 6–8% of the frame.
+Top overlay:
+Small realistic Korean KBO broadcast scoreboard at the top of the frame:
+LG 3 — SSG 2
+8회말 2아웃
+21:47
+LIVE
+KBO 리그
 
-Scoreboard layout:
-Left side:
-LG logo + “LG” + score “3”
-
-Right side:
-SSG logo + “SSG” + score “2”
-
-Center:
-“8회말 2아웃”
-
-Additional broadcast elements:
-small clock “21:47”
-tiny red LIVE dot
-“KBO 리그” wordmark
-
-Authentic Korean TV broadcast typography with a slim semi-transparent dark gradient strip background.
-
-789Bingo LOGO PLACEMENT:
-The 789Bingo logo appears as a small embroidered or heat-printed patch on the upper-left chest area of her clothing.
-Approximately 4–6cm wide.
-Realistic stitching, folds, shading, and natural fabric integration.
-The logo remains fully visible and readable throughout the entire video.
-
-WARDROBE:
-Casual Korean baseball fan clothing in neutral or team colors.
-Natural cotton fabric texture.
-Realistic folds and stitching.
-
-LIGHTING:
-Realistic Korean baseball stadium LED lighting.
-Cool white arena lights.
-Night game atmosphere.
+Lighting:
+Realistic Korean stadium LED lighting at night.
 Natural skin tones.
-Subtle blue/cyan stadium shadows.
-Bright realistic stadium highlights.
+Live TV broadcast texture.
+Subtle digital compression and high-ISO sports broadcast noise.
 
-STYLE & TEXTURE:
-Ultra realistic live KBO television broadcast aesthetic.
-Authentic sports spectator-cam realism.
-Natural motion cadence.
-Subtle digital TV compression.
-Slight high-ISO broadcast noise.
-Realistic TV sharpness.
-Tiny natural motion blur.
-
-TIMING:
-0–2s:
-She quietly watches the game with a slow blink.
-
-2–4s:
-Her eyes subtly track the play.
-
-4–6s:
-A small breath in, slight concentration increase.
-
-6–8s:
-Tiny head adjustment following the ball.
-
-8–10s:
-Eyes remain focused on the field with one final slow blink.
-
-Throughout the entire 10 seconds:
-camera position remains unchanged,
-broadcast framing remains unchanged,
-scoreboard remains unchanged,
-789Bingo chest logo remains visible,
-the atmosphere remains calm, observational, and realistic.
-
+Ultra realistic sports broadcast aesthetic.
 `;
 
 export async function POST(req: Request) {
