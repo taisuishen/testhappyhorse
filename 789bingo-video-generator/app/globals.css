@@ -96,7 +96,7 @@ p {
 
 .templateGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
@@ -116,6 +116,10 @@ p {
 
 .templateButton.happyhorse {
   background: linear-gradient(135deg, #f6d365, #ff8a3d);
+}
+
+.templateButton.baseball {
+  background: linear-gradient(135deg, #1e88e5, #43c6ac);
 }
 
 .templateButton.active {

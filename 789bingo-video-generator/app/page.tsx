@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 
 type Status = "idle" | "uploading" | "creating" | "polling" | "success" | "failed";
-type Template = "cherry" | "tiktok" | "happyhorse";
+type Template = "cherry" | "tiktok" | "happyhorse" | "baseball";
 
 const TIKTOK_REFERENCE_VIDEO = "https://litter.catbox.moe/49eknj.mp4";
 
@@ -40,6 +40,8 @@ export default function Home() {
         ? "已选择 TikTok 舞蹈模板，上传人物图片后生成换人舞蹈视频"
         : next === "happyhorse"
         ? "已选择 Happy Horse 模板，无需上传图片，直接生成品牌视频"
+        : next === "baseball"
+        ? "已选择球场看球模板，上传自拍后生成球场反应镜头，衣服带 789Bingo logo"
         : "已选择樱花树下的约定模板，上传人物图片后生成视频"
     );
   }
@@ -135,6 +137,8 @@ export default function Home() {
           ? "/api/generate-tiktok-dance"
           : template === "happyhorse"
           ? "/api/generate-happy-horse"
+          : template === "baseball"
+          ? "/api/generate-baseball-fan"
           : "/api/generate-video";
 
       const generateResp = await fetch(endpoint, {
@@ -173,7 +177,7 @@ export default function Home() {
       <section className="card">
         <div className="templateHeader">
           <span>模板选择</span>
-          <small>当前开放 3 个模板</small>
+          <small>当前开放 4 个模板</small>
         </div>
 
         <div className="templateGrid">
@@ -198,6 +202,13 @@ export default function Home() {
           >
             Happy Horse 文生
           </button>
+          <button
+            className={`templateButton baseball ${template === "baseball" ? "active" : ""}`}
+            type="button"
+            onClick={() => onSelectTemplate("baseball")}
+          >
+            球场看球
+          </button>
         </div>
 
         {template === "tiktok" && (
@@ -212,6 +223,16 @@ export default function Home() {
           <div className="referenceBox">
             <strong>纯文生视频</strong>
             <span>该模板无需上传图片，直接点击下方按钮即可生成 Happy Horse 品牌视频</span>
+          </div>
+        )}
+
+        {template === "baseball" && (
+          <div className="referenceBox">
+            <strong>球场看球模板</strong>
+            <span>
+              上传一张正脸自拍，系统会生成韩国职业棒球直播镜头切到你看球反应的视频，衣服胸口会自动印上 789Bingo
+              logo
+            </span>
           </div>
         )}
 
