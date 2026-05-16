@@ -13,28 +13,20 @@ ONE SINGLE CONTINUOUS LOCKED-OFF SHOT:
 The entire 10 seconds is one continuous take from one camera position. The camera is locked on a tripod with only tiny natural handheld micro drift. Long telephoto sports lens look, 135mm–200mm equivalent. Very shallow depth of field with compressed stadium background and soft creamy bokeh.
 
 CAMERA ANGLE:
-Near-frontal portrait angle. Her body and face are almost directly facing the camera with a subtle 10–15° offset. Her eyes and gaze are directed toward the baseball field rather than the lens.
+Three-quarter front angle with a natural 20–30° side offset from her face direction. Her body is slightly angled toward the field rather than directly toward camera. Her eyes and gaze are continuously focused on the baseball field, never toward the lens. The shot should feel like a real sports broadcast spectator capture rather than a portrait setup.
 
 FRAMING:
-Wide full-body group shot. The frame shows her from head to knees/feet, including full torso, both arms, lap, and legs seated naturally in the stadium chair. Include 1–2 spectators seated on both sides of her and a visible row of fans behind her. Comfortable headroom and natural spacing around the group.
+Medium-wide seated spectator framing. Show her clearly from head to upper legs/knees while seated naturally in the stadium chair. Keep both shoulders, torso, lap, and chest area fully visible during the entire video. Her hands stay naturally lowered near her lap or seat armrest and never block the chest logo or camera view.
 
-SURROUNDING FANS:
-The spectators beside her are visible and recognizable with natural detail. They wear ordinary KBO fan clothing such as caps, team tees, light jackets, and scarves. The deeper background crowd falls into softer bokeh.
+Include 1–2 spectators seated on both sides of her and a visible row of fans behind her. Maintain natural spacing and realistic stadium crowd composition.
 
-SUBJECT BEHAVIOR:
-She is calmly and seriously focused on the baseball game. Natural micro-expressions only:
-slow blinking,
-steady breathing,
-slight eye tracking,
-tiny head movement following the play,
-subtle lip movement,
-slight concentrated brow tension,
-neutral mouth expression.
+789Bingo LOGO VISIBILITY:
+The 789Bingo chest logo must remain fully visible and readable during the entire 10 seconds. Place the logo clearly on the upper-left chest area of her clothing with enough lighting and camera angle visibility for the branding to be recognizable at all times.
 
-Her posture remains relaxed and still throughout the shot.
+The logo appears as a realistic embroidered or heat-printed chest patch integrated naturally into the fabric with stitching, folds, and shading.
 
 TOP-OF-FRAME KBO SCOREBOARD:
-A realistic Korean KBO TV scoreboard banner is pinned across the top ~12% of the screen for the entire 10 seconds.
+A smaller and more realistic Korean KBO TV scoreboard banner appears across only the top 6–8% of the frame. The scoreboard should feel subtle and proportional like a real television broadcast overlay rather than dominating the screen.
 
 Scoreboard layout:
 Left side:
@@ -46,18 +38,26 @@ SSG logo + “SSG” + score “2”
 Center:
 “8회말 2아웃”
 
-Additional broadcast elements:
+Additional elements:
 small clock “21:47”
 tiny red LIVE dot
 “KBO 리그” wordmark
 
-Korean Hangul broadcast typography with semi-transparent dark gradient background strip and authentic live TV styling.
+Use authentic Korean TV broadcast typography with a slim semi-transparent dark gradient strip background.
+
+SUBJECT BEHAVIOR:
+She is calmly and seriously focused on the baseball game with authentic micro-expressions only:
+slow blinking,
+steady breathing,
+subtle eye tracking,
+tiny head movement following the play,
+slight concentrated brow tension,
+neutral mouth expression.
+
+Her posture remains relaxed and natural throughout the shot.
 
 WARDROBE:
-She wears a casual Korean baseball fan shirt or fitted light jacket in a solid color such as white, black, or team color. Natural cotton texture and realistic fabric folds.
-
-789Bingo LOGO PLACEMENT:
-The 789Bingo logo appears as a small embroidered or heat-printed chest patch on the upper-left chest area of her clothing. Approximately 4–6cm wide with realistic stitching, shading, folds, and fabric integration. The logo remains fixed in the same chest position throughout the entire video.
+Casual Korean baseball fan shirt or fitted light jacket in solid neutral or team colors with natural cotton texture and realistic folds.
 
 LIGHTING:
 Realistic stadium LED lighting.
@@ -68,7 +68,7 @@ Subtle blue/cyan shadows.
 Bright stadium highlights.
 
 BACKGROUND:
-Crowded Korean baseball stadium atmosphere with subtle audience movement, occasional cheer sticks and live sports energy.
+Crowded Korean baseball stadium audience with subtle movement, occasional cheer sticks, and realistic live sports atmosphere. Nearby spectators remain recognizable while deeper background crowds fall into softer bokeh.
 
 STYLE & TEXTURE:
 Ultra realistic live KBO television broadcast aesthetic.
@@ -99,7 +99,7 @@ Throughout the entire 10 seconds:
 camera position remains unchanged,
 framing remains unchanged,
 scoreboard remains unchanged,
-789Bingo chest logo remains unchanged.
+789Bingo chest logo remains visible and unobstructed.
 
 `;
 
