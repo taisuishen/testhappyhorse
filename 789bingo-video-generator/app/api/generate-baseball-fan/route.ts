@@ -1,7 +1,7 @@
 export const runtime = "nodejs";
 
 const prompt = `
-Create a hyper realistic 5-second live sports broadcast reaction shot in 3:4 vertical aspect ratio, captured inside a crowded Korean baseball stadium during an intense late-game moment.
+Create a hyper realistic 10-second Korean KBO live baseball TV broadcast clip in 3:4 vertical aspect ratio, captured inside a crowded Korean professional baseball stadium during an intense late-game moment.
 
 You must use [Image 1] and [Image 2] as strict visual references.
 
@@ -9,52 +9,59 @@ You must use [Image 1] and [Image 2] as strict visual references.
 
 [Image 2] is the uploaded selfie reference. The female spectator must match the person in [Image 2] exactly, including facial appearance, hairstyle, makeup style, skin tone, temperament, body proportions, and overall visual identity. Preserve the original face, hairstyle, and character identity from [Image 2] consistently throughout the entire video — do NOT alter the face from [Image 2].
 
-The camera suddenly cuts to this young female spectator sitting among the crowd. She does NOT look at the camera. She is fully focused on the baseball game, reacting naturally with subtle emotional tension — blinking slowly, slightly biting her lip, breathing softly, with tiny micro-expressions and authentic, unposed human behavior. The shot feels like a real televised baseball broadcast reaction cam, not a cinematic movie scene. Atmosphere: accidental, candid, observational, unposed.
+This is NOT one continuous shot. The video uses multiple live broadcast camera angles cut together like a real KBO television feed, with clean hard cuts between angles. The framing is observational and slightly distant — DO NOT push into extreme close-ups of the face; keep her face at a comfortable medium / medium-close framing as if shot from across the stands with a long sports telephoto lens.
 
-CAMERA STYLE:
-- Live TV sports broadcast camera operator behavior.
-- Long telephoto sports lens, 135–200mm equivalent.
-- Very shallow depth of field, compressed stadium background, soft creamy bokeh.
+PERSISTENT TOP-OF-FRAME BROADCAST GRAPHICS (visible on every shot):
+- A realistic Korean KBO TV scoreboard banner pinned across the top ~12% of the screen.
+- Layout: left team logo + abbreviation "LG" with score "3", right team logo + abbreviation "SSG" with score "2", center inning indicator "8회말 2아웃" (8th inning, bottom, 2 outs), small clock "21:47", a tiny "LIVE" red dot, and a stylized "KBO 리그" wordmark.
+- Hangul Korean typography, sharp anti-aliased TV broadcast style, semi-transparent dark gradient strip background.
+- Graphics stay perfectly stable and consistent across all camera cuts — do not drift, flicker, change scores, or mistranslate text.
+
+SHOT LIST (5 cuts, 2 seconds each, hard cuts between shots):
+
+- 0–2s — WIDE ESTABLISHING SHOT:
+  Wide stadium overview from high upper deck. Bright white stadium LED lights, packed Korean crowd waving thundersticks, scoreboard graphics visible at the top. The subject is NOT featured yet. Slight handheld camera drift.
+
+- 2–4s — MEDIUM CROWD SHOT:
+  Camera at field level looking up into the stands, panning slowly across rows of fans cheering, blurred foreground railings. Telephoto compression. The subject is not yet visible.
+
+- 4–6s — MEDIUM REACTION SHOT (subject introduction):
+  Hard cut to the female spectator from [Image 2] sitting among the crowd, framed from chest up with some headroom and visible shoulders. She is NOT looking at the camera; she is watching the field. Long telephoto sports lens, shallow depth of field, creamy bokeh of the crowd behind her. Soft handheld instability. Tiny micro-expressions: slow blink, soft breath. Her clothing (casual baseball-fan tee or light jacket) clearly shows the "789Bingo" brand logo from [Image 1] on the upper-left chest area.
+
+- 6–8s — 3/4 PROFILE CUT:
+  Hard cut to a different camera angle on the same spectator — three-quarter profile from a slightly lower and side position, still medium framing (chest up), shoulders and upper torso visible. Slight subtle zoom-in. She bites her lip very slightly, eyes tracking the play. Logo on the chest remains clearly visible and stable, sharp, undistorted.
+
+- 8–10s — PULL-BACK GROUP REACTION:
+  Hard cut to a wider medium shot showing her plus 1–2 nearby fans reacting around her. The crowd energy rises, people behind her stand up or raise arms in slow motion. She lets out a small gasp / mouth slightly opens. Camera drifts gently. Logo on her chest still visible.
+
+CAMERA & LENS STYLE:
+- Live KBO TV sports broadcast camera operator behavior, multiple operators across the stadium.
+- Long telephoto sports lenses, 135–300mm equivalent, very shallow depth of field, compressed stadium background, soft creamy bokeh.
 - Slight handheld instability, tiny autofocus breathing, gentle live camera drift.
-- Very slow subtle zoom-in during the shot.
-- Framing slightly imperfect, like a real sports director camera cut.
+- Framing slightly imperfect, like a real sports director's live camera cut.
+- Keep the subject at medium / medium-close distance — NEVER extreme close-up, NEVER face-filling the frame.
 
 LIGHTING:
-- Realistic stadium LED lighting, cool white arena lights.
+- Realistic stadium LED lighting, cool white arena lights, night baseball game atmosphere.
 - Natural skin tones, slight blue/cyan shadows, bright stadium highlights.
-- Night baseball game atmosphere.
 
 SUBJECT WARDROBE & BRAND LOGO PLACEMENT:
-- She wears a casual baseball-fan outfit (e.g. a fitted team-style tee or light jacket) that matches the appearance and styling of the clothing seen on the character in [Image 2] if applicable; otherwise a clean cotton tee suitable for a stadium.
-- Place the "789Bingo" brand logo from [Image 1] clearly on the upper-left chest area of the clothing. The logo must match [Image 1] exactly in font, color, shape, logo styling, glow effect, and premium appearance.
-- The logo must look naturally printed or embroidered on the fabric — NOT floating in air, NOT in the background, NOT distorted, NOT mirrored, NOT recolored.
-- Logo stays stable, sharp, and consistent across every frame, with realistic fabric folds and lighting interaction.
+- She wears a casual baseball-fan outfit (fitted team-style tee or light jacket).
+- The "789Bingo" brand logo from [Image 1] is clearly placed on the upper-left chest area of the clothing in every shot that shows her, matching [Image 1] exactly in font, color, shape, glow effect, and premium appearance.
+- The logo looks naturally printed or embroidered on the fabric — NOT floating, NOT in background, NOT distorted, NOT mirrored, NOT recolored.
+- Logo stays stable, sharp, and consistent across every frame and every camera cut.
 
 BACKGROUND:
-- Crowded baseball stadium audience, people moving naturally.
-- Occasional blurry cheering gestures behind her.
-- Live sports energy, depth and realism in crowd movement.
+- Crowded Korean baseball stadium audience, fans waving cheer sticks, light sticks, team flags.
+- Occasional blurry cheering gestures, depth and realism in crowd movement, live sports energy.
 
-STYLE:
-- Ultra realistic, live television broadcast aesthetic, sports reaction cam.
-- Authentic Korean baseball TV style, candid spectator capture.
+STYLE & TEXTURE:
+- Ultra realistic, live television broadcast aesthetic, authentic KBO sports reaction cam.
 - Natural motion cadence, no dramatic acting, no cinematic Hollywood look.
+- Slight digital broadcast compression, subtle high-ISO noise, realistic TV sharpness, tiny motion blur from live camera movement.
 
-TEXTURE:
-- Slight digital broadcast compression, subtle high-ISO noise.
-- Realistic TV sharpness, tiny motion blur from live camera movement.
-
-MOTION:
-- The woman slightly shifts her gaze following the baseball game.
-- Small facial reactions only, hair moves subtly, natural blinking, slow breathing.
-- Background crowd continuously moves organically.
-
-TIMING (5 seconds):
-- 0–2s: camera settles on the spectator.
-- 2–4s: subtle emotional reaction builds.
-- 4–5s: tiny expression change while crowd energy increases.
-
-Negative prompt: cinematic movie look, fashion photography, studio lighting, influencer aesthetic, perfect symmetry, exaggerated emotions, overacting, anime, CGI look, plastic skin, beauty commercial, music video style, artificial posing, direct eye contact, over-sharpened face, fake smile, dramatic camera movement, low realism, generated-looking hands, face distortion, changing the face from [Image 2], changing the logo from [Image 1], floating logo, misplaced logo, wrong logo position, logo distortion, text artifacts, watermark.
+NEGATIVE PROMPT:
+extreme close-up, face-filling frame, lips-filling frame, single continuous one-shot take, no camera cuts, missing scoreboard, missing top graphics, English-only scoreboard, wrong Korean text, cinematic movie look, fashion photography, studio lighting, influencer aesthetic, perfect symmetry, exaggerated emotions, overacting, anime, CGI look, plastic skin, beauty commercial, music video style, artificial posing, direct eye contact, over-sharpened face, fake smile, dramatic Hollywood camera movement, low realism, generated-looking hands, face distortion, changing the face from [Image 2], changing the logo from [Image 1], floating logo, misplaced logo, wrong logo position, logo distortion, text artifacts, watermark.
 `;
 
 export async function POST(req: Request) {
@@ -98,7 +105,7 @@ export async function POST(req: Request) {
           parameters: {
             resolution: "720P",
             ratio: "3:4",
-            duration: 5,
+            duration: 10,
           },
         }),
       }
