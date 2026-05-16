@@ -1,7 +1,7 @@
 export const runtime = "nodejs";
 
 const prompt = `
-Hyper realistic Korean KBO baseball stadium reaction-cam shot, 10 seconds, vertical 3:4.
+Hyper realistic Korean KBO baseball stadium reaction-cam shot, 10 seconds, vertical 4:3.
 
 Use [Image 1] as the exact 789Bingo logo reference.
 Use [Image 2] as the exact face and identity reference for the female spectator.
@@ -96,7 +96,7 @@ export async function POST(req: Request) {
           },
           parameters: {
             resolution: "720P",
-            ratio: "3:4",
+            ratio: "4:3",
             duration: 10,
           },
         }),
